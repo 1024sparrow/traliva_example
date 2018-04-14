@@ -77,4 +77,5 @@ $ traliva_starter/init.sh
 ## Автор и лицензия
 
 Copyright © 2017-2018 [Васильев Борис](https://github.com/1024sparrow)
+
 Публикуется под лицензией [MIT license](https://github.com/1024sparrow/traliva/blob/master/LICENSE).
