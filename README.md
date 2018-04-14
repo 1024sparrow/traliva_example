@@ -10,11 +10,11 @@
     Последовательность действий для создания проекта.
     1. Создайте директорию под ваш проект. Зайдите в неё.
     2. Скачайте данный проект со скриптами следующей командой:
-    ```sh
-        git clone https://github.com/1024sparrow/traliva_starter.git
-    ```
+```sh
+$ git clone https://github.com/1024sparrow/traliva_starter.git
+```
       Заходить в появившуюся директорию не нужно.
     3. Запустите скрипт инициализации
-    ```sh
-        traliva_starter/init.sh
-    ```
+```sh
+$ traliva_starter/init.sh
+```
