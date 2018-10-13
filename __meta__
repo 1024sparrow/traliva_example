@@ -1,0 +1,23 @@
+{
+    "files":[
+        {
+            "target": "gameplay.js",
+            "type":[],
+            "source":{
+                "list":[
+                    "traliva/traliva.js",
+                    "gameplay.js"
+                ]
+            }
+        },
+        {
+            "target": "config",
+            "source":{ "list":["config"] }
+        },
+        {
+            "target": "api",
+            "source":{"list":["api"]}
+        }
+    ],
+    "dir_proc": ["project_final"]
+}
