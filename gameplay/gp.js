@@ -10,9 +10,53 @@ var $o = {
     },
     $layouts:{
         $lay_1:{
+            $bg: '#000',
             $type: '$strip',
             $orient: 'v',
-            $items:['dd','aa']
+            $items:[
+                {
+                    $widget:{
+                        $type: '$strip',
+                        $orient: 'h',
+                        $items: ['$bnBooks', '$bnMusic']
+                    },
+                    $size: '64px'
+                },
+                '$scene'
+            ]
+        },
+    },
+    $widgets:{
+        $bnBooks: {
+            $constructor: $TralivaKit.$Button,
+            $options:{
+                $title: 'Книги',
+                $activeVarName: '$bnModeBooks',
+                $color: '#ffa',
+                $hover_color: '#004',
+                $active_bgColor: '',
+                $border:{$radius: '10px'}
+            },
+            $substate: '$gui'
+        },
+        $bnMusic: {
+            $constructor: $TralivaKit.$Button,
+            $options:{
+                $title: 'Музыка',
+                $activeVarName: '$bnModeMusic',
+                $color: '#ffa',
+                $hover_color: '#004',
+                $border:{$radius: '10px'}
+            },
+            $substate: '$gui'
+        }
+    },
+    $states:{
+        $initState:{
+            $gui:{
+                $bnModeBooks: true,
+                $bnModeMusic: false
+            }
         }
     }
 };
