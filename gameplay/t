@@ -3,7 +3,8 @@ $Traliva.$debug = {
     $state: true
 };
 //USAGE_END#debug##
-var $o = {
+{%% logics.js %%}
+$Traliva.$init({
     $target: 'web',
     $get_layout:function($w, $h, $target){
         return '$lay_1';
@@ -32,5 +33,4 @@ var $o = {
     $states:{
         {%% states.js %%}
     }
-};
-$Traliva.$init($o);
+});

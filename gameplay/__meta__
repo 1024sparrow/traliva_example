@@ -5,6 +5,7 @@
             "type": [],
             "source":{
                 "list":[
+                    "logics.js",
                     "widgets.js",
                     "states.js"
                 ],
