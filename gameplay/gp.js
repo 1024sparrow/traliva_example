@@ -1,8 +1,10 @@
 //hello from gp.js
 
+//USAGE_BEGIN#debug##
 $Traliva.$debug = {
     $state: true
 };
+//USAGE_END#debug##
 var $o = {
     $target: 'web',
     $get_layout:function($w, $h, $target){
@@ -31,11 +33,7 @@ var $o = {
             $constructor: $TralivaKit.$Button,
             $options:{
                 $title: 'Книги',
-                $activeVarName: '$bnModeBooks',
-                $color: '#ffa',
-                $hover_color: '#004',
-                $active_bgColor: '',
-                $border:{$radius: '10px'}
+                $activeVarName: '$bnModeBooks'
             },
             $substate: '$gui'
         },
@@ -43,10 +41,7 @@ var $o = {
             $constructor: $TralivaKit.$Button,
             $options:{
                 $title: 'Музыка',
-                $activeVarName: '$bnModeMusic',
-                $color: '#ffa',
-                $hover_color: '#004',
-                $border:{$radius: '10px'}
+                $activeVarName: '$bnModeMusic'
             },
             $substate: '$gui'
         }
