@@ -5,7 +5,11 @@ $initState:{
     },
     $booksOrMusic: 'books',
     $books:{
-        $current: undefined,
+        $current:{
+            $book: undefined, // не id, а порядковый номер в списке
+            $fragment: undefined,
+            $block: undefined
+        },
         $list:[
             {
                 $id: 123, // для формирования URL на загрузку
@@ -37,29 +41,47 @@ $initState:{
                 $title: 'album 3'
             },
         ],
-        $player:{
-            $url: '', // boris here
+        $player:{ // $index формируется исходя из URL, $url уже подставляется логикой
+            $index: undefined,
+            $url: '',
+            $pos: undefined
         }
     }
 },
 $tree:[
     {
-        books:{
-            $substate: 'booksOrMusic',
-            $name: 'books'
+        books:{ // /books
+            $substate: '$booksOrMusic',
+            $name: '$books'
         },
-        book:{
-            $substate: 'booksOrMusic',
-            $name: 'books'
-            $params: ['books/current']
+        book:{ // /book/5
+            $substate: '$booksOrMusic',
+            $name: '$books'
+            $params: [
+                '$books/$current/$book',
+                '$books/$current/$fragment=0',
+                '$books/$current/$block=0'
+            ]
         },
-        music:{
-            $substate: 'booksOrMusic',
-            $name: 'music'
-        },
-        album:{
-            $substate: 'booksOrMusic',
-            $name: 'music'
+        music:{ // /music
+            $substate: '$booksOrMusic',
+            $name: '$music',
+            $d:[
+                {
+                    album:{ // /music/album/5
+                        $substate: '$music/$current',
+                        $params:['$music/$current'],
+                        $d:[
+                            {
+                                track:{ // /music/album/5/track/2
+                                    $substate: '$music/$player/$index',
+                                    $params: ['$music/$player/$index']
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
         }
     }
 ],
