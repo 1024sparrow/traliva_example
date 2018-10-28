@@ -5,7 +5,8 @@
             "type": [],
             "source":{
                 "list":[
-                    "gp.js"
+                    "widgets.js",
+                    "states.js"
                 ],
                 "template": "t",
                 "types":{}
