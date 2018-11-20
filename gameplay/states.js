@@ -53,10 +53,12 @@ $initState:{
 $tree:[
     {
         books:{ // /books
+            $debugName: 'books',
             $substate: '$booksOrMusic',
             $name: '$books'
         },
         book:{ // /book/5
+            $debugName: 'book',
             $substate: '$booksOrMusic',
             $name: '$books',
             $params: [
@@ -66,16 +68,19 @@ $tree:[
             ]
         },
         music:{ // /music
+            $debugName: 'music',
             $substate: '$booksOrMusic',
             $name: '$music',
             $d:[
                 {
                     album:{ // /music/album/5
+                        $debugName: 'music/album',
                         $substate: '$music/$current',
                         $params:['$music/$current'],
                         $d:[
                             {
                                 track:{ // /music/album/5/track/2
+                                    $debugName: 'music/album/track',
                                     $substate: '$music/$player/$index',
                                     $params: ['$music/$player/$index']
                                 }

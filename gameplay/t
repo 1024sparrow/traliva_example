@@ -1,6 +1,7 @@
 //USAGE_BEGIN#debug##
 $Traliva.$debug = {
-    $state: true
+    $state: true,
+    $url: 'traliva.ru'
 };
 //USAGE_END#debug##
 {%% logics.js %%}
