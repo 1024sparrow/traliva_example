@@ -10,7 +10,7 @@ var $o = {
     },
     $layouts:{
         $lay_1:{
-            $type: '$strip',
+            $type: $TralivaKit.$Strip,
             $orient: 'v',
             $items:['dd','aa']
         }
