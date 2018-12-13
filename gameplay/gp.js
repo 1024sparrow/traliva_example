@@ -12,7 +12,14 @@ var $o = {
         $lay_1:{
             $type: $TralivaKit.$Strip,
             $orient: 'v',
-            $items:['dd','aa']
+            $items:[
+                'dd',
+                'aa',
+                {
+                    $_widget: 'qwe',
+                    $size: '32px'
+                }
+            ]
         }
     }
 };
