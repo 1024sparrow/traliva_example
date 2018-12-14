@@ -11,15 +11,53 @@ var $o = {
     $layouts:{
         $lay_1:{
             $type: $TralivaKit.$Strip,
-            $orient: 'v',
+            //$orient: #e#$TralivaKit__Strip__orient:h##,
+            $orient: #e#$TralivaKit__Strip__orient:v##,
             $items:[
-                'dd',
-                'aa',
+                '$dd',
+                '$aa',
                 {
-                    $_widget: 'qwe',
+                    $_widget: '$qwe',
                     $size: '32px'
                 }
             ]
+        }
+    },
+    $widgets:{
+        /*$aa:{
+            $constructor: $TralivaKit.$Button,
+            $options:{
+                $title: 'Моя красивая кнопка'
+            }
+        }*/
+        $aa:{
+            $constructor: $TralivaKit.$Strip,
+            $options:{
+                $orient: #e#$TralivaKit__Strip__orient:v##
+            },
+            $children:{
+                $items: {
+                    //'$1', '$2'
+                    $constructor: $TralivaKit.$Button,
+                    $options:{
+                        $title: 'xyz'
+                    },
+                    $substate: '$books.$list'
+                }
+            }
+        }
+    },
+    $states:{
+        $initState:{
+            $hello: '123e',
+            $books:{
+                $list:[
+                    {
+                    },
+                    {
+                    }
+                ]
+            }
         }
     }
 };
