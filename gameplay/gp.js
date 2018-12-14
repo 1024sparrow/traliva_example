@@ -42,7 +42,7 @@ var $o = {
                     $options:{
                         $title: 'xyz'
                     },
-                    $substate: '$books.$list'
+                    $substate: '$books/$list'
                 }
             }
         }
