@@ -41,6 +41,7 @@ var $o = {
                     $constructor: $TralivaKit.$Button,
                     $options:{
                         $title: 'xyz'
+                        //$titleVarName: 't'
                     },
                     $substate: '$books/$list'
                 }
@@ -53,8 +54,10 @@ var $o = {
             $books:{
                 $list:[
                     {
+                        //t: 'кнопка 1'
                     },
                     {
+                        t: 'кнопка 2'
                     }
                 ]
             }
