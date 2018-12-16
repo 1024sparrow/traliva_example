@@ -40,6 +40,9 @@ var $o = {
                     //'$1', '$2'
                     $constructor: $TralivaKit.$Button,
                     $options:{
+                        $size: '64px'
+                    },
+                    $itemOptions:{
                         $title: 'xyz'
                         //$titleVarName: 't'
                     },
