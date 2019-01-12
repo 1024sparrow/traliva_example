@@ -68,3 +68,10 @@ var $o = {
     }
 };
 $Traliva.$init($o);
+
+/*#MASK#boris$hello:a,b,v##
+var a = #m#boris$hello:a,v##;
+if (a & #m#boris$hello:a##)
+    ;
+if (a & #m#boris$hello##)
+    ;*/
