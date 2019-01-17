@@ -1,7 +1,8 @@
 //hello from gp.js
 
 $Traliva.$debug = {
-    $state: true
+    $state: true,
+    //$url: 'qwe.rty'
 };
 var $o = {
     $target: 'web',
@@ -64,7 +65,19 @@ var $o = {
                     }
                 ]
             }
-        }
+        },
+        $tree:[
+            {
+                1:{
+                    $substate: '$hello',
+                    $name: '11'
+                },
+                2:{
+                    $substate: '$hello',
+                    $name: '22'
+                }
+            }
+        ]
     }
 };
 $Traliva.$init($o);
