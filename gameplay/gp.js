@@ -55,6 +55,8 @@ var $o = {
     $states:{
         $initState:{
             $hello: '123e',
+            $s1: '$book',
+            $p: '84',
             $books:{
                 $list:[
                     {
@@ -68,6 +70,57 @@ var $o = {
         },
         $tree:[
             {
+                book: {
+                    d: [
+                        {
+                            page: {
+                                $substate: '$s3',
+                                $name: '$page'
+                            }
+                        },
+                        {
+                            contents: {
+                                $substate: '$s3',
+                                $name: '$contents'
+                            }
+                        }
+                    ],
+                    $substate: '$s1',
+                    $name: '$book',
+                    $params: ['$p']
+                },
+                books: {
+                    $substate: '$s1',
+                    $name: '$books'
+                },
+                music: {
+                    $substate: '$s1',
+                    $name: '$music'
+                }
+            },
+            {
+                auth:{
+                    d: [
+                        {
+                            login: {
+                                $substate: '$s3',
+                                $name: '$login'
+                            }
+                        },
+                        {
+                            register: {
+                                $substate: '$s3',
+                                $name: '$register'
+                            }
+                        }
+                    ],
+                    $substate: '$s2'
+                }
+            }
+        ]
+
+        /*[
+            {
                 1:{
                     $substate: '$hello',
                     $name: '11'
@@ -77,7 +130,7 @@ var $o = {
                     $name: '22'
                 }
             }
-        ]
+        ]*/
     }
 };
 $Traliva.$init($o);
