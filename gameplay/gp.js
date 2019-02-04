@@ -55,7 +55,9 @@ var $o = {
     $states:{
         $initState:{
             $hello: '123e',
-            $s1: '$book',
+            $s1: '$booke',
+            //$s2: '12',
+            //$s3: '34',
             $p: '84',
             $books:{
                 $list:[
@@ -87,7 +89,7 @@ var $o = {
                     ],
                     $substate: '$s1',
                     $name: '$book',
-                    $params: ['$p']
+                    //$params: ['$p']
                 },
                 books: {
                     $substate: '$s1',
