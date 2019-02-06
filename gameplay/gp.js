@@ -73,7 +73,7 @@ var $o = {
         $tree:[
             {
                 book: {
-                    d: [
+                    $d: [
                         {
                             page: {
                                 $substate: '$s3',
@@ -102,7 +102,7 @@ var $o = {
             },
             {
                 auth:{
-                    d: [
+                    $d: [
                         {
                             login: {
                                 $substate: '$s3',
