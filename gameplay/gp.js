@@ -77,7 +77,8 @@ var $o = {
                         {
                             page: {
                                 $substate: '$s3',
-                                $name: '$page'
+                                $name: '$page',
+                                $params: ['$p']
                             }
                         },
                         {
