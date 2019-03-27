@@ -144,3 +144,11 @@ if (a & #m#boris$hello:a##)
     ;
 if (a & #m#boris$hello##)
     ;*/
+
+#u#qwe##
+#USAGE_BEGIN#qwe##
+#USAGE_BEGIN#qwe_debug##
+//qwe debug
+#USAGE_END#qwe_debug##
+//qwe internals
+#USAGE_END#qwe##
