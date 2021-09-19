@@ -60,13 +60,86 @@ var $o = {
 	},
 	$states:{
 		$initState:{
-            //
-            $kb:{
-                $type: '$phone',
-                //$type: '$classic',
-                '$layout': '$ru'
-            }
-		}
+			$hello: '123e',
+			$s1: '$booke',
+			//$s2: '12',
+			//$s3: '34',
+			$p: '84',
+			$books:{
+				$list:[
+					{
+						//t: 'кнопка 1'
+					},
+					{
+						t: 'кнопка 2'
+					}
+				]
+			}
+		},
+		/*$tree:[
+			{
+				book: {
+					$d: [
+						{
+							page: {
+								$substate: '$s3',
+								$name: '$page',
+								$params: ['$p']
+							}
+						},
+						{
+							contents: {
+								$substate: '$s3',
+								$name: '$contents'
+							}
+						}
+					],
+					$substate: '$s1',
+					$name: '$book',
+					//$params: ['$p']
+				},
+				books: {
+					$substate: '$s1',
+					$name: '$books'
+				},
+				music: {
+					$substate: '$s1',
+					$name: '$music'
+				}
+			},
+			{
+				auth:{
+					$d: [
+						{
+							login: {
+								$substate: '$s3',
+								$name: '$login'
+							}
+						},
+						{
+							register: {
+								$substate: '$s3',
+								$name: '$register'
+							}
+						}
+					],
+					$substate: '$s2'
+				}
+			}
+		]*/
+
+		/*[
+			{
+				1:{
+					$substate: '$hello',
+					$name: '11'
+				},
+				2:{
+					$substate: '$hello',
+					$name: '22'
+				}
+			}
+		]*/
 	}
 };
 $Traliva.$init($o);
